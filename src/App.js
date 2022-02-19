@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
 
-function App() {
+// want to make a COUNTER app
+// 1. Make a button
+// 2. detect when the button is clicked
+
+
+function App () {
+  let myAge = 20
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <h2 style={{color: 'red'}}>My Name is Isaac, I am {myAge} years old.</h2>
+      <button onClick={() => {
+        myAge = myAge + 1
+        alert(myAge)
+      }}> + </button>
+      <button onClick={() => alert('you clicked the - button')}> - </button>
+    </>
+  )
+
 }
 
-export default App;
+// The empty divs are JSX Fragments
+// How to make a funcitonal component
+// variables
+// did some JSX 
+// inline styling
+//JSX: We are writing HTML inside Javascript "{}"--> allows you to put javascript code inside HTML
+export default App
