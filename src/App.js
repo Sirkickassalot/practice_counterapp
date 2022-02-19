@@ -1,5 +1,6 @@
 import './App.css'
 import { useState } from 'react'
+import MyButton from './MyButton'
 
 // want to make a COUNTER app
 // 1. Make a button
@@ -9,16 +10,17 @@ import { useState } from 'react'
 
 
 function App () {
-  const [count, setCount] = useState(20)
+  const [count, setCount] = useState(29)
   // increment a state variable >>> setCount(count + 1)
 
-  let myAge = 20
+  let myAge = 29
   // increment a REGULAR variable >>> myAge = myAge + 1
   return (
     <>
       <h2 style={{color: 'red'}}>{count}</h2>
       <button onClick={() => {setCount(count + 1)}}> + </button>
       <button onClick={() => {setCount(count - 1)}}> - </button>
+      <MyButton/>
     </>
   )
 
