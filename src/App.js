@@ -1,6 +1,6 @@
 import './App.css'
 import { useState } from 'react'
-import MyButton from './MyButton'
+import MyButton from './components/MyButton'
 
 // want to make a COUNTER app
 // 1. Make a button
@@ -20,12 +20,16 @@ function App () {
       <h2 style={{color: 'red'}}>{count}</h2>
       <button onClick={() => {setCount(count + 1)}}> + </button>
       <button onClick={() => {setCount(count - 1)}}> - </button>
-      <MyButton/>
+      <MyButton title='BUY' color='red'/>
+      <MyButton title='SELL' color='green'/>
+
     </>
   )
 
 }
 
+// the 'title' and 'color' in the component on lines 23 and 24 are props
+// learned how to create your own component
 // (in simplest terms) if you use a state variable instead of a regular variable; the state variable gets updated in real time.
 // The empty divs are JSX Fragments
 // How to make a funcitonal component
